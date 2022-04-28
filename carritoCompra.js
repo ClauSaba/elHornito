@@ -38,4 +38,4 @@ function promo(diaSemana){
     console.log(`El descuento en el total de tu compra de $ ${totalCarro} es del ${(porcentaje)*100}%,\n. El total a pagar es $ ${neto}, tu descuento fue de ${totalCarro-neto}!!!`);
 }
 
-promo(descuentoAdicional);
+promo();

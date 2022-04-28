@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content=" Especialistas en pizzas, contrata nuestros servicios de catering o aprende a hacerla vos mismo ">
     <meta name="keywords" content="catering, pizza, escuela, curso, taller, eventos, napolitana, servicio de catering, horno, hornito, leña ">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Asap:ital,wght@1,400;1,600&family=Bitter:wght@300;500&family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
@@ -71,21 +72,23 @@
                 <h2>Ingredientes certificados en origen</h2>
                 <div class="cardsContainer">
                     <div class="cards">
-                    <div class="cardsInnerFront">
-                        <img src="./img/harina.jpeg" alt="Imagen harina 5 stagioni">
-                    </div>
-                    <div class="cardsInnerBack">
-                        <h3>Harina</h3>
-                        <p class="descripcionCard">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nisi dolore eius laboriosam dicta commodi, consequatur a voluptatibus hic repellat, dolor provident maiores alias eum quod ipsam ea ex eveniet veniam.</p>
-                        <button><a href="./pages/carroCompra.html"></a>Agregar a Carrito</button>
-                    </div>                
+                        <div class="cardsInnerFront">
+                            <img src="./img/harina.jpeg" alt="Imagen harina 5 stagioni">
+                        </div>
+
+                        <div class="cardsInnerBack">
+                            <h3 class="cardTittle">Harina</h3>
+                            <p class="descripcionCard">La mejor harina para tus pizzas, proteina: 14,5%, ideal para el desarrollo del gluten en tu masa. Los albeolos serán de buen tamaño, logrando una pizza de facil digestión. </p>
+                            <button><a href="./pages/carroCompra.html"></a>Agregar a Carrito</button>
+                        </div>                
                     </div> 
+                    
                     <div class="cards">
                     <div class="cardsInnerFront">
                         <img src="./img/tomate.jfif" alt="Imagen harina 5 stagioni">
                     </div>
                     <div class="cardsInnerBack">
-                        <h3>Tomate</h3>
+                        <h3 class="cardTittle">Tomate</h3>
                         <p class="descripcionCard">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nisi dolore eius laboriosam dicta commodi, consequatur a voluptatibus hic repellat, dolor provident maiores alias eum quod ipsam ea ex eveniet veniam.</p>
                         <button><a href="./pages/carroCompra.html"></a>Agregar a Carrito</button>
                     </div>                
@@ -95,7 +98,7 @@
                         <img src="./img/mozzarella.jpg" alt="Imagen harina 5 stagioni">
                     </div>
                     <div class="cardsInnerBack">
-                        <h3>Mozzarella</h3>
+                        <h3 class="cardTittle" >Mozzarella</h3>
                         <p class="descripcionCard">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nisi dolore eius laboriosam dicta commodi, consequatur a voluptatibus hic repellat, dolor provident maiores alias eum quod ipsam ea ex eveniet veniam.</p>
                         <button><a href="./pages/carroCompra.html"></a>Agregar a Carrito</button>
                     </div>                
@@ -114,29 +117,27 @@
                         <img src="img/pizza06.png" alt="">
                         <img src="img/pizza09.png" alt="">
                         <img src="img/pizza10.png" alt="">
-                        <img src="img/pizza12.png" alt="">
                         <img src="img/pizza13.png" alt="">
                         <img src="img/pizza14.png" alt="">
-                        <img src="img/pizza16.png" alt="">
-                        <img src="img/pizza17.png" alt="">
                     </div>    
                 </div> 
             </div>
         </section>
     </main>
     <footer>
-        copyRight, mapa de sitio
-        <ul>
-            <li>Direccion</li>
-            <li>Telefono</li>
-            <li>
-                <ul>
-                    <li>icono FB</li>
-                    <li>icono IG</li>
-                    <li>icono TW</li>
-                </ul>
-            </li>
+        <h6>2022 copyRight, desarrollado por ClauSaba</h6>
+        
+        
+        <ul class="socialMediaLinks">
+            <li class="btnFB"><a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-square"></i></a></li>
+            <li class="btnTW"><a href="https://twitter.com" target="_blank"><i class="fab fa-twitter-square"></i></a></li>
+            <li class="btnIG"><a href="https://instagram.com" target="_blank"><i class="fab fa-instagram-square"></i></a></li>
         </ul>
+        
+        <ul class="telefono">
+            
+            <li>11 - 1234 - 5678</li>
+        <ul>
     </footer>
     <script src="./carritoCompra.js"></script>
 </body>
