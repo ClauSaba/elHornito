@@ -47,15 +47,30 @@ producto202,
 producto203
 ]
 
-let solicitaGusto = parseInt(prompt(`Por favor elige un gusto de la siguiente lista: \n"101", "Margarita" \n"102", "Pepperoni" \n"103", "Calabresa"\n"104", "Roquefort"\n"105", "Champiniones"\n"106", "CuatroQuesos"\n"107", "Cabra"\n"108", "Marinara"\n"109", "Bacon"\n"110", "JamonMorrones"\n"111", "Palmitos"\n"112", "EspecialCasa"\n"201", "Harina x kg"\n"202", "Tomate lata"\n"203", "Muzzarella x kilo"`));
-let solicitaCantidad = parseInt(prompt("candidad? :"));
+// let solicitaGusto = parseInt(prompt(`Por favor elige un gusto de la siguiente lista: \n"101", "Margarita" \n"102", "Pepperoni" \n"103", "Calabresa"\n"104", "Roquefort"\n"105", "Champiniones"\n"106", "CuatroQuesos"\n"107", "Cabra"\n"108", "Marinara"\n"109", "Bacon"\n"110", "JamonMorrones"\n"111", "Palmitos"\n"112", "EspecialCasa"\n"201", "Harina x kg"\n"202", "Tomate lata"\n"203", "Muzzarella x kilo"`));
+// let solicitaCantidad = parseInt(prompt("candidad? :"));
 
-console.log("el cliente pide de: "+ solicitaGusto +" la cantidad " + solicitaCantidad + " unidades.");
+// console.log("el cliente pide de: "+ solicitaGusto +" la cantidad " + solicitaCantidad + " unidades.");
 
-let pedidoGusto = inventario.find((e) => e.codigo ===solicitaGusto);
-console.log(pedidoGusto);
+// let pedidoGusto = inventario.find((e) => e.codigo ===solicitaGusto);
+// console.log(pedidoGusto.precio);
 
-pedidoGusto.venta(solicitaCantidad); //descuenta del stock lo que se vendio
-console.log(pedidoGusto);
-pedidoGusto.fabricar(solicitaCantidad); // envia orden de fabricacion para reponer stock vendido
-console.log(pedidoGusto);
+// pedidoGusto.venta(solicitaCantidad); //descuenta del stock lo que se vendio
+// console.log(pedidoGusto);
+// pedidoGusto.fabricar(solicitaCantidad); // envia orden de fabricacion para reponer stock vendido
+// console.log(pedidoGusto);
+
+for(const producto of inventario){
+    let listaProducto = document.createElement("p");
+    listaProducto.innerHTML = `${producto.gusto} ${producto.precio} `;
+    pedido.appendChild(listaProducto);
+}
+
+// let carrito = [""]; //ir sumando elementos a medida que el usuario pone una cantidad dif a 0
+// let totalCarrito = (sumatoriaItems);
+// let totalPagar = (sumatoriaCarritoMasIva);
+
+let nombre = prompt("nombre");
+let muestraNombre = document.createElement("strong");
+muestraNombre.innerHTML = `${nombre} , `;
+prueba.append(muestraNombre);

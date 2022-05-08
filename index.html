@@ -16,49 +16,53 @@
 </head>
 <body>
     <header class="cabecera">
-        <div class="logo"><img src="img/logoHorno.png" alt="logo el hornito"> </div>
+        <div class="logo"><img src="./img/logoHorno.png" alt="logo el hornito"> </div>
         <nav class="categorias">
-            <ul>
-                <li>Catering</li>
-                <li>Curso</li>
-                <li>Ingredientes</li>
-                <li>Galeria</li>
+            <ul class="navegador">
+                <li><a href="#catering">Catering</a></li>
+                <li><a href="#eventos">Eventos</a></li>
+                <li><a href="#curso">Curso</a></li>
+                <li><a href="#galeria">Galeria</a></li>
+                <li><a href="#ingredientes"> Ingredientes</a></li>
             </ul>
             
         </nav>
-        <button><img src="./img/icons8-carrito-de-compras-48(@2x).png"></img></button>
+        <button ><a href="./pages/carroCompra.html"><img src="./img/icons8-carrito-de-compras-48(@2x).png"></img></a></button>
         
     </header>
     <main>
         <section class="cuerpoPrincipal">
             <div class="intro bloque">
-            <img src="./img/pizzaSaliendoHorno.jpg" alt="Pizza saliendo del horno leña">
-            <div class="descripcion">
-                <h2>Pasión por la Pizza..</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo aliquid animi dolor quasi maxime quod porro praesentium? Nulla non minima illum magni nemo aperiam nisi, harum impedit. Reiciendis, dolore blanditiis!</p>
-                <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Est perspiciatis magni totam, sapiente ex rerum adipisci cumque architecto, voluptas, velit modi nihil. Quo provident harum beatae consequuntur sequi, assumenda illo! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem delectus earum, soluta error iure repellendus ratione eos expedita molestiae nam cumque at, animi quia quas magni ipsam! Reprehenderit, dolorem culpa!</p>
-            </div>
-            </div>
-
-            <div class="catering bloque">
-            <div class="descripcion">
-                <h2>Pizzas recien salidas del horno..</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo aliquid animi dolor quasi maxime quod porro praesentium? Nulla non minima illum magni nemo aperiam nisi, harum impedit. Reiciendis, dolore blanditiis!</p>
-                <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Est perspiciatis magni totam, sapiente ex rerum adipisci cumque architecto, voluptas, velit modi nihil. Quo provident harum beatae consequuntur sequi, assumenda illo! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem delectus earum, soluta error iure repellendus ratione eos expedita molestiae nam cumque at, animi quia quas magni ipsam! Reprehenderit, dolorem culpa!</p>
+                <img src="./img/pizzaSaliendoHorno.jpg" alt="Pizza saliendo del horno leña">
+                <div class="descripcion">
+                    <h2>Pasión por la Pizza..</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo aliquid animi dolor quasi maxime quod porro praesentium? Nulla non minima illum magni nemo aperiam nisi, harum impedit. Reiciendis, dolore blanditiis!</p>
+                    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Est perspiciatis magni totam, sapiente ex rerum adipisci cumque architecto, voluptas, velit modi nihil. Quo provident harum beatae consequuntur sequi, assumenda illo! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem delectus earum, soluta error iure repellendus ratione eos expedita molestiae nam cumque at, animi quia quas magni ipsam! Reprehenderit, dolorem culpa!</p>
                 </div>
-            <img src="./img/equipoPizzeros.jpg" alt="Pizza saliendo del horno leña">
             </div>
 
+            <a name="catering">
+            <div class="catering bloque">
+                <div class="descripcion">                
+                    <h2>Pizzas recien salidas del horno..</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo aliquid animi dolor quasi maxime quod porro praesentium? Nulla non minima illum magni nemo aperiam nisi, harum impedit. Reiciendis, dolore blanditiis!</p>
+                    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Est perspiciatis magni totam, sapiente ex rerum adipisci cumque architecto, voluptas, velit modi nihil. Quo provident harum beatae consequuntur sequi, assumenda illo! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem delectus earum, soluta error iure repellendus ratione eos expedita molestiae nam cumque at, animi quia quas magni ipsam! Reprehenderit, dolorem culpa!</p>
+                </div>
+                <img src="./img/equipoPizzeros.jpg" alt="Pizza saliendo del horno leña">
+            </div>
+
+            <a name="eventos"></a>
             <div class="eventos bloque">
             <img src="./img/equipoEventos.jpg" alt="Pizza saliendo del horno leña">
-            <div class="eventosInner">
+            <div class="eventosInner descripcion">
                 <h2>Nos ocupamos de todo, vos solo disfrutá de la fiesta!</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo aliquid animi dolor quasi maxime quod porro praesentium? Nulla non minima illum magni nemo aperiam nisi, harum impedit. Reiciendis, dolore blanditiis!</p>
                 <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Est perspiciatis magni totam, sapiente ex rerum adipisci cumque architecto, voluptas, velit modi nihil. Quo provident harum beatae consequuntur sequi, assumenda illo! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem delectus earum, soluta error iure repellendus ratione eos expedita molestiae nam cumque at, animi quia quas magni ipsam! Reprehenderit, dolorem culpa!</p>
-                <button><a href="./pages/carroCompra.html"></a>Reservas</button>
+                <button class="botonReserva"><a href="./pages/carroCompra.html"></a>Reservas</button>
             </div>
             </div>
 
+            <a name="curso"></a>
             <div class="curso bloque">
             <div class="descripcion">
                 <h2>Taller intensivo Pizza Napolitana</h2>
@@ -68,66 +72,74 @@
             <img src="./img/escuelaPizza.jpg" alt="Pizza saliendo del horno leña">
             </div>
 
-            <div class="shopping">
-                <h2>Ingredientes certificados en origen</h2>
-                <div class="cardsContainer">
-                    <div class="cards">
-                        <div class="cardsInnerFront">
-                            <img src="./img/harina.jpeg" alt="Imagen harina 5 stagioni">
-                        </div>
-
-                        <div class="cardsInnerBack">
-                            <h3 class="cardTittle">Harina</h3>
-                            <p class="descripcionCard">La mejor harina para tus pizzas, proteina: 14,5%, ideal para el desarrollo del gluten en tu masa. Los albeolos serán de buen tamaño, logrando una pizza de facil digestión. </p>
-                            <button><a href="./pages/carroCompra.html"></a>Agregar a Carrito</button>
-                        </div>                
-                    </div> 
-                    
-                    <div class="cards">
-                    <div class="cardsInnerFront">
-                        <img src="./img/tomate.jfif" alt="Imagen harina 5 stagioni">
-                    </div>
-                    <div class="cardsInnerBack">
-                        <h3 class="cardTittle">Tomate</h3>
-                        <p class="descripcionCard">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nisi dolore eius laboriosam dicta commodi, consequatur a voluptatibus hic repellat, dolor provident maiores alias eum quod ipsam ea ex eveniet veniam.</p>
-                        <button><a href="./pages/carroCompra.html"></a>Agregar a Carrito</button>
-                    </div>                
-                    </div>
-                    <div class="cards">
-                    <div class="cardsInnerFront">
-                        <img src="./img/mozzarella.jpg" alt="Imagen harina 5 stagioni">
-                    </div>
-                    <div class="cardsInnerBack">
-                        <h3 class="cardTittle" >Mozzarella</h3>
-                        <p class="descripcionCard">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nisi dolore eius laboriosam dicta commodi, consequatur a voluptatibus hic repellat, dolor provident maiores alias eum quod ipsam ea ex eveniet veniam.</p>
-                        <button><a href="./pages/carroCompra.html"></a>Agregar a Carrito</button>
-                    </div>                
-                    </div>  
-                </div>
-            </div>   
-
+            
+            <a name="galeria"></a>
             <div class="galeria">
                 <div class="galeriaInner">
                     <h2>Nuestras creaciones</h2>
                     <div class="fotosPizzas">
-                        <img src="img/pizza02.png" alt="">
-                        <img src="img/pizza03.png" alt="">
-                        <img src="img/pizza04.png" alt="">
-                        <img src="img/pizza05.png" alt="">
-                        <img src="img/pizza06.png" alt="">
-                        <img src="img/pizza09.png" alt="">
-                        <img src="img/pizza10.png" alt="">
-                        <img src="img/pizza13.png" alt="">
-                        <img src="img/pizza14.png" alt="">
+                        <img src="img/pizza02.png" alt="Margarita">
+                        <img src="img/pizza03.png" alt="Pepperoni">
+                        <img src="img/pizza04.png" alt="Calabresa">
+                        <img src="img/pizza05.png" alt="Roquefort">
+                        <img src="img/pizza06.png" alt="Champiniones">
+                        <img src="img/pizza09.png" alt="CuatroQuesos">
+                        <img src="img/pizza10.png" alt="Cabra">
+                        <img src="img/pizza13.png" alt="Marinara">
+                        <img src="img/pizza14.png" alt="Bacon">
                     </div>    
-                </div> 
+                </div>
+                <button class="boton"><a href="./pages/carroCompra.html">Ver lista de sabores</a> </button>
             </div>
+
+            <a name="ingredientes"></a>
+                <div class="shopping ">
+                    <h2>Ingredientes certificados en origen</h2>
+                    <div class="cardsContainer">
+                        <div class="cards">
+                            <div class="cardsInnerFront">
+                                <img src="./img/harina.jpeg" alt="Imagen harina 5 stagioni">
+                            </div>
+                            <div class="cardsInnerBack">
+                                <h3 class="cardTittle">Harina</h3>
+                                <p class="descripcionCard">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nisi dolore eius laboriosam dicta commodi, consequatur a voluptatibus hic repellat, dolor provident maiores alias eum quod ipsam ea ex eveniet veniam.</p>
+                                <button class="boton"><a href="./pages/carroCompra.html"></a>Agregar a Carrito</button>
+                            </div>                
+                        </div>
+    
+                        <div class="cards">
+                            <div class="cardsInnerFront">
+                                <img src="./img/tomate.jfif" alt="Tomate San Marzano">
+                            </div>
+                            <div class="cardsInnerBack">
+                                <h3 class="cardTittle">Tomate</h3>
+                                <p class="descripcionCard">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nisi dolore eius laboriosam dicta commodi, consequatur a voluptatibus hic repellat, dolor provident maiores alias eum quod ipsam ea ex eveniet veniam.</p>
+                                <button class="boton"><a href="./pages/carroCompra.html"></a>Agregar a Carrito</button>
+                            </div>                
+                        </div>
+    
+                        <div class="cards">
+                            <div class="cardsInnerFront">
+                                <img src="./img/mozzarella.jpg" alt="Imagen harina 5 Mozzarella de Buffala">
+                            </div>
+                            <div class="cardsInnerBack">
+                                <h3 class="cardTittle" >Mozzarella</h3>
+                                <p class="descripcionCard">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nisi dolore eius laboriosam dicta commodi, consequatur a voluptatibus hic repellat, dolor provident maiores alias eum quod ipsam ea ex eveniet veniam.</p>
+                                <button class="boton"><a href="./pages/carroCompra.html"></a>Agregar a Carrito</button>
+                            </div>                
+                        </div>  
+                    </div>
+                </div>   
+    
+                
         </section>
     </main>
     <footer>
-        <h6>2022 copyRight, desarrollado por ClauSaba</h6>
-        
-        
+        <div class="copyRight">
+            <h6>® 2022 todos los derechos reservados</h6>
+            <h6>--- desarrollado por ClauSaba ---</h6>
+        </div>
+
         <ul class="socialMediaLinks">
             <li class="btnFB"><a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-square"></i></a></li>
             <li class="btnTW"><a href="https://twitter.com" target="_blank"><i class="fab fa-twitter-square"></i></a></li>
@@ -139,6 +151,6 @@
             <li>11 - 1234 - 5678</li>
         <ul>
     </footer>
-    <script src="./productos.js"></script>
+    <script></script>
 </body>
 </html>
