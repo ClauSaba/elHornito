@@ -6,6 +6,7 @@ font-family: 'Josefin Sans', sans-serif;
   padding: 0;
   margin: 0;
   list-style-type: none;
+  text-decoration: none;
   scroll-behavior: smooth;
   scroll-padding-top: 20vh; }
 
@@ -159,10 +160,10 @@ h2 {
 .galeria {
   text-align: center;
   padding: 5vh 0; }
-  .galeria button {
+  .galeria .botonesIndex {
     margin-top: 8vh;
     margin-left: 55vw; }
-    .galeria button a {
+    .galeria .botonesIndex a {
       text-decoration: none; }
 
 .fotosPizzas {
@@ -213,4 +214,23 @@ footer {
 #pedido {
   font-size: 5vh;
   font-weight: bolder;
-  color: #fdf497; }
+  color: white; }
+  #pedido .cartas {
+    color: brown; }
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  column-gap: 10px;
+  row-gap: 10px;
+  justify-items: stretch;
+  align-content: space-between;
+  align-items: center; }
+  .grid .card {
+    border: 5px solid white;
+    background-color: wheat; }
+    .grid .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover; }
