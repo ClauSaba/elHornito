@@ -13,9 +13,11 @@
     <title>El Hornito - Especialistas en pizzas</title>
     <link rel="shortcut icon" href="img/faviconPizza.png">
     <link rel="stylesheet" href="../css/style.css"> 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
 </head>
 <body>
-    <header class="cabecera">
+    <header class="cabeceraCarrito">
         <div class="logo"><img src="../img/logoHorno.png" alt="logo el hornito"> </div>
         <nav class="categorias">
             <ul class="navegador">
@@ -24,11 +26,29 @@
         </nav>
     </header>
     <main id="pedido">
-        <div id= "cartas" class="container grid"> </div>
-        <span id="tituloPaginaCarrito"> <span id="prueba"></span> este es tu pedido:</span>
-        
+        <div id= "cartas" class="container grid pb-5 "> </div>
+        <span id="tituloPaginaCarrito"> </span>
+        <span> este es tu pedido:</span>
+        <table class="table table-dark table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">Codigo</th>
+                    <th scope="col">Producto</th>
+                    <th scope="col">Precio</th>
+                    <th scope="col">Cantidad</th>
+                </tr>
+            </thead>
+            <tbody id="tablaCarrito">
+                <!-- <tr>
+                    <th scope="row">1</th>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                </tr> -->
+            </tbody>
+        </table>
     
-    
+        <button id="vaciaCarrito">Vaciar Carrito</button>
     </main>
 
     
@@ -50,7 +70,7 @@
         <ul>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
     <script src="../productos.js"></script>
 </body>
 </html>
