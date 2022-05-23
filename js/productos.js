@@ -1,5 +1,5 @@
 //DECLARACION DE VARIABLES
-let carrito = localStorage.getItem("carrito") || [];
+const carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 const tablaCarrito = document.getElementById("tablaCarrito");
 const cartas = document.getElementById("cartas");
 const vaciaCarrito = document.getElementById("vaciaCarrito");
@@ -13,6 +13,7 @@ class productos{
     this.precio = precio;
     this.stock = stock;
     this.foto = foto;
+    this.cantidad = 0;
     }
     fabricar(cantidad){
         return this.stock = this.stock + cantidad;
@@ -98,20 +99,20 @@ cargaProducto(inventario,cartas);
 //EVENTO QUE DISPARA FUNCION DE AGREGACARRO
 (()=>{    
     cartas.addEventListener("click", agregaCarro);
-    //cartas.addEventListener("click", filaTabla); EN PROGRESO
 })();
+
 function agregaCarro(e){
     e.preventDefault();
     const seleccion = e.target.classList[0];
-    // ver de agregar cantidad con imput  let cantidad = 1;
+    // ver de agregar cantidad con imput  let cantidad = 1; prod.lenght + 1
     switch(seleccion){
         case("101"):
             localStorage.setItem("producto101", JSON.stringify(producto101))
             carrito.push({
-                codigo: producto101.codigo,
+                codigo: producto101.codigo + "asdfg",
                 producto: producto101.gusto,
                 precio: parseInt(producto101.precio),
-                cantidad: 1,      
+                cantidad: parseInt(producto101.cantidad) + 1,      
             })
             break;
         case("102"):
@@ -217,7 +218,6 @@ function agregaCarro(e){
     console.log(carrito);
 }
 
-
 //BOTON PARA VACIAR CARRITO
 (()=>{    
     vaciaCarrito.addEventListener("click", vaciar);
@@ -227,23 +227,35 @@ function vaciar(){
     localStorage.clear()
 }
 
-/*  EN PROGRESO
-
 //AGREGA FILAS A LA TABLA CON PRODUCTOS ELEGIDOS
-const fila = (resultado) =>{ 
+const fila = (item) =>{ 
     return(
         `
         <tr>
-            <th scope="row">${resultado}</th>
-            <td>${resultado.codigo}</td>
-            <td>${resultado.gusto}</td>
-            <td>${resultado.precio}</td>
-            <td>${resultado.cantidad}</td>
+            <td>${item.codigo}</td>
+            <td>${item.gusto}</td>
+            <td>${item.precio}</td>
+            <td>${item.cantidad}</td>
         </tr>
         `
-    )
+    );
+};
+
+//FUNCION PARA CREAR FILAS EN CARRITO
+const cargaFila = (nodo)=>{
+    let acumulador = "";
+    for(let item of carrito){
+        
+        acumulador += fila;
+    
+    }
+    // nodo.innerHTML = acumulador;
+    console.log(carrito);
 }
 
+cargaFila(carrito, tablaCarrito);
+
+/*  EN PROGRESO
 function filaTabla(e, nodo){
     e.preventDefault();
     const item =  e.target.classList[0];

@@ -13,5 +13,8 @@
   "devDependencies": {
     "node-sass": "^7.0.1",
     "nodemon": "^2.0.15"
+  },
+  "dependencies": {
+    "lightpick": "^1.6.2"
   }
 }
