@@ -12,7 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Asap:ital,wght@1,400;1,600&family=Bitter:wght@300;500&family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
     <title>El Hornito - Especialistas en pizzas</title>
     <link rel="shortcut icon" href="img/faviconPizza.png">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    
     <link rel="stylesheet" href="../css/style.css"> 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 
@@ -28,23 +28,28 @@
     </header>
     <main id="procesamiento">
         <div class="promociones">
-            <h2 class="tituloPromo">
-                Aprovechá la super promo, solicitando el catering o eventos para <p><b>un Domingo acumulá un 5% adicional de descuento, y si es para un Martes, el 10% adicional!!</b></p>
-            </h2>
-            <h3 class="tituloPickDay">
-                Elige la fecha: 
-            </h3>
-            <input id="flatpickr">
-            <p id="leyendaDescuentoDiaSemana"></p>
-            <h3 id="totalCarrito">El total de tu compra es: $</h3>
-            <h3 id="descuentoDiaSemana"></h3>
-            <h3 id="descuentoMayor"></h3>
-            <h3 id="totalAntesIVA"></h3>
-            <h4 id="importePagar"></h4>
-            
+            <div class="tituloPromo">
+                <h1 >
+                    Aprovechá las super promos acumulables!!
+                </h1>
+                <h3>- Si tu pedido es para un Domingo, tenes un 5% de descuento!</h3>
+                <h3>- Si es para un Martes el 10%!</h3>
+                <h3>- y sumá 10% extra cuando tu compra supere los $10mil</h3>
+            </div>
 
+            <form id="fechaUsuario">
+                <input type="date" id="fecha" placeholder="para que fecha?">
+                <button id="capturaFecha" class="btn btn-warning" onclick="fechaPedido()">Aceptar</button>
+                <span id="formFecha">Fecha seleccionada: </span>
+            </form>    
+            <p id="leyendaDescuentoDiaSemana"></p>
+            <p id="totalCarrito">El total de tu compra es: $</p>
+            <p id="descuentoDiaSemana"></p>
+            <p id="descuentoMayor"></p>
+            <p id="totalAntesIVA"></p>
+            <p id="importePagar"></p> 
+            <button class="btn btn-warning"><a href="#"> Pagar</a></button>
         </div>
-        <button><a href="#"> Pagar</a></button>
     </main>
     
     <footer>
@@ -65,7 +70,9 @@
         <ul>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.3/moment.min.js" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.3/locale/es-us.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
     <script src="../js/procesamientoPago.js"></script>
 </body>

@@ -3,34 +3,54 @@
 si es domingo o martes respectivamente
 */
 
-let fechaReservaCliente = flatpickr('#flatpickr');
-
-//console.log( (fechaReservaCliente));
 
 
-fechaReservaCliente = new Date ("2022-04-19  23:23:23"); // este dato lo tiene que tomar cuando el usuario clickee un calendario
+// Captura la fecha seleccionada por el usuario
+function fechaPedido(){ 
+let fecha = document.getElementById("fecha").value;
+localStorage.setItem("fechaElegida", fecha);
+}
+let fechaCapturada = localStorage.getItem("fechaElegida");
+
+// Muestra la fecha seleccionada por el usuario
+let muestraFecha = moment(fechaCapturada).format("dddd, DD-MM-YYYY");
+let formFecha = document.getElementById("formFecha");
+formFecha.append(muestraFecha)
+
+// Calcula el getDay para los futuros calculos
+fechaReservaCliente = new Date (fechaCapturada); 
 let diaSemana = fechaReservaCliente.getDay();
 
-console.log(diaSemana);
-
 //mensaje de descuento
-let leyendaDescuentoDiaSemana = document.getElementById("leyendaDescuentoDiaSemana");
-let leyendaDomingo = "Elegiste un Domingo, obtuviste un descuento de 5%!!";
-let leyendaMartes = "Elegiste un Martes, obtuviste un descuento de 10%!!";
-diaSemana === 0 && leyendaDescuentoDiaSemana.append(leyendaDomingo);
-diaSemana === 2 && leyendaDescuentoDiaSemana.append(leyendaMartes);
+function leyendaDescuentoDiaSemana(diaSemana){
+    diaSemana === 6 && Swal.fire({
+        position: 'top-end',
+        icon: 'success',
+        title: 'Descuento adicional dia Domingo del 5%!!',
+        showConfirmButton: false,
+        timer: 3500
+    });
+    diaSemana === 1 && Swal.fire({
+        position: 'top-end',
+        icon: 'success',
+        title: 'Descuento adicional dia Martes del 10%!!',
+        showConfirmButton: false,
+        timer: 3500
+    });
+}
+leyendaDescuentoDiaSemana(diaSemana)
 
 // muestra Importe Bruto sin descuentos
 let totalCarrito = document.getElementById("totalCarrito");
-let totalCarro = 16000; // traer valor de carritoCompra.js
+let totalCarro = 21000; // traer valor de carritoCompra.js
 totalCarrito.append(totalCarro)
 
 //mensaje de descuento por dia de semana
 let descuentoDiaSemana = document.getElementById("descuentoDiaSemana");
 let descuentoDomingo = totalCarro * 0.05;
 let descuentoMartes = totalCarro * 0.10;
-diaSemana === 0 && descuentoDiaSemana.append(`menos Descuento por dia Domingo: $ ${descuentoDomingo}`);
-diaSemana === 2 && descuentoDiaSemana.append(`menos Descuento por dia Martes: $ ${descuentoMartes}`);
+diaSemana === 6 && descuentoDiaSemana.append(`menos Descuento por dia Domingo: $ ${descuentoDomingo}`);
+diaSemana === 1 && descuentoDiaSemana.append(`menos Descuento por dia Martes: $ ${descuentoMartes}`);
 
 
 //mensaje descuento compra mayor a 10.000
@@ -51,13 +71,13 @@ let sumoDescuentos = 0
 
 function descuentoTotal() {
     
-    if (diaSemana === 0 && totalCarro >10000){
+    if (diaSemana === 6 && totalCarro >10000){
         sumoDescuentos = descuentoDomingo + calculoDescuento;
-    }else if (diaSemana === 2 && totalCarro >10000){
+    }else if (diaSemana === 1 && totalCarro >10000){
         sumoDescuentos = descuentoMartes + calculoDescuento;
-    }else if (diaSemana === 0 && totalCarro <10000){
-        sumoDescuentos = descuentoMartes;
-    }else if (diaSemana === 2 && totalCarro <10000){
+    }else if (diaSemana === 6 && totalCarro <10000){
+        sumoDescuentos = descuentoDomingo;
+    }else if (diaSemana === 1 && totalCarro <10000){
         sumoDescuentos = descuentoMartes;    
     }else{
         sumoDescuentos = 0;

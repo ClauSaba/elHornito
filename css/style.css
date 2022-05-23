@@ -14,10 +14,6 @@ font-family: 'Josefin Sans', sans-serif;
 p {
   font-family: 'Josefin Sans', sans-serif; }
 
-h2 {
-  font-family: 'Asap', sans-serif;
-  font-size: 2vw; }
-
 .boton {
   min-width: 130px;
   height: 40px;
@@ -263,7 +259,7 @@ footer {
 .btn a {
   text-decoration: none;
   list-style-type: none;
-  color: white; }
+  color: black; }
 
 .tituloPromo {
   color: wheat;
@@ -272,3 +268,36 @@ footer {
 .tituloPickDay {
   color: white;
   font-size: 2.5vh; }
+
+#fecha {
+  color: black;
+  font-weight: bolder; }
+
+.tituloPromo h1 {
+  font-weight: bold;
+  font-size: 4vw;
+  font-family: 'Josefin Sans', sans-serif; }
+
+.tituloPromo h3 {
+  font-size: 2vw;
+  color: #d1cfc9;
+  padding-bottom: 2vh; }
+
+.tituloPromo {
+  margin-bottom: 3vh; }
+
+.promociones p {
+  font-size: 3vh; }
+
+#fechaUsuario {
+  margin-bottom: 5vh; }
+
+#formFecha {
+  font-size: 3vh;
+  font-weight: bolder;
+  margin-left: 3vw; }
+
+#fecha {
+  font-size: 3vh;
+  font-weight: bolder;
+  margin-left: 3vw; }
