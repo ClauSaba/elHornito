@@ -53,10 +53,6 @@ producto301,
 producto302
 ]
 
-for (const iterator of inventario) {
-    console.log(iterator.codigo);
-}
-
 // Obtiene nombre de usuario e impreme en pantalla
 function obtenerUsuario(){
     if(sessionStorage.getItem("nombre")){
@@ -108,32 +104,126 @@ cargaProducto(inventario,cartas);
 function agregaCarro(e){
     e.preventDefault();
     const seleccion = e.target.classList[0];
+    switch(seleccion){// ver de hacer un find() en vez de switch + un push
+        case("101"):// probar poner la variable del codigo para evitar tanta linea
+            localStorage.setItem("carrito", JSON.stringify(carrito))
+            carrito.push({
+                codigo: producto101.codigo,
+                producto: producto101.gusto,
+                precio: parseInt(producto101.precio),
+                cantidadSolicitada: parseInt(producto101.cantidadSolicitada),      
+            })
+            break;
+        case("102"):
+            localStorage.setItem("carrito", JSON.stringify(carrito))
+            carrito.push({
+                codigo: producto102.codigo,
+                producto: producto102.gusto,
+                precio: parseInt(producto102.precio),
+                cantidadSolicitada: parseInt(producto102.cantidadSolicitada), 
+            })    
+            break;
+        case("103"):
+            localStorage.setItem("carrito", JSON.stringify(carrito))
+            carrito.push({
+                codigo: producto103.codigo,
+                producto: producto103.gusto,
+                precio: parseInt(producto103.precio),
+                cantidadSolicitada: parseInt(producto103.cantidadSolicitada), 
+            })    
+            break;
+        case("104"):
+            localStorage.setItem("carrito", JSON.stringify(carrito))
+            carrito.push({
+                codigo: producto104.codigo,
+                producto: producto104.gusto,
+                precio: parseInt(producto104.precio),
+                cantidadSolicitada: parseInt(producto104.cantidadSolicitada),
+            })    
+            break;
+        case("105"):
+            localStorage.setItem("carrito", JSON.stringify(carrito))
+            carrito.push({
+                codigo: producto105.codigo,
+                producto: producto105.gusto,
+                precio: parseInt(producto105.precio),
+                cantidadSolicitada: parseInt(producto105.cantidadSolicitada),
+            })    
+            break;
+        case("106"):
+            localStorage.setItem("carrito", JSON.stringify(carrito))
+            carrito.push({
+                codigo: producto106.codigo,
+                producto: producto106.gusto,
+                precio: parseInt(producto106.precio),
+                cantidadSolicitada: parseInt(producto106.cantidadSolicitada), 
+            })    
+            break;
+        case("107"):
+            localStorage.setItem("carrito", JSON.stringify(carrito))
+            carrito.push({
+                codigo: producto107.codigo,
+                producto: producto107.gusto,
+                precio: parseInt(producto107.precio),
+                cantidadSolicitada: parseInt(producto107.cantidadSolicitada),
+            })    
+            break;
+        case("201"):
+            localStorage.setItem("carrito", JSON.stringify(carrito))
+            carrito.push({
+                codigo: producto201.codigo,
+                producto: producto201.gusto,
+                precio: parseInt(producto201.precio),
+                cantidadSolicitada: parseInt(producto201.cantidadSolicitada), 
+            })    
+            break;
+        case("202"):
+            localStorage.setItem("carrito", JSON.stringify(carrito))
+            carrito.push({
+                codigo: producto202.codigo,
+                producto: producto202.gusto,
+                precio: parseInt(producto202.precio),
+                cantidadSolicitada: parseInt(producto202.cantidadSolicitada), 
+            })    
+            break;
+        case("203"):
+            localStorage.setItem("carrito", JSON.stringify(carrito))
+            carrito.push({
+                codigo: producto203.codigo,
+                producto: producto203.gusto,
+                precio: parseInt(producto203.precio),
+                cantidadSolicitada: parseInt(producto203.cantidadSolicitada),
+            })    
+            break;
+        case("301"):
+            localStorage.setItem("carrito", JSON.stringify(carrito))
+            carrito.push({
+                codigo: producto301.codigo,
+                producto: producto301.gusto,
+                precio: parseInt(producto301.precio),
+                cantidadSolicitada: parseInt(producto301.cantidadSolicitada), 
+            })    
+            break;
+        case("302"):
+            localStorage.setItem("carrito", JSON.stringify(carrito))
+            carrito.push({
+                codigo: producto302.codigo,
+                producto: producto302.gusto,
+                precio: parseInt(producto302.precio),
+                cantidadSolicitada: parseInt(producto302.cantidadSolicitada), 
+            })    
+            break;
+    }
 
-    const elegido = inventario.find( item=> item.codigo === seleccion)
-    console.log(elegido);
-}
-
-
-//BOTON PARA VACIAR CARRITO
-(()=>{    
-    vaciaCarrito.addEventListener("click", vaciar);
-    
-})();
-function vaciar(){
-    localStorage.clear()
-}
-
-//AGREGA FILAS A LA TABLA CON PRODUCTOS ELEGIDOS
 let fila = (item) =>{ 
     return(
         `
         <tr>
-            <td> ${item.codigo}</td>
-            <td>${item.gusto}</td>
-            <td>$${item.precio}</td>
-            <td>${item.cantidadSolicitada}</td>
-        </tr>
-        `
+        <td> ${item.codigo}</td>
+        <td>${item.producto}</td>
+        <td>$${item.precio}</td>
+        <td>${item.cantidadSolicitada}</td>
+        </tr>`
     );
 };
 
@@ -146,6 +236,16 @@ let cargaFila = (datosCarro, nodoCarro)=>{
         console.log();
         nodoCarro.innerHTML = acumuladorCarro;
 }
-
-
 cargaFila(carrito, tablaCarrito);
+
+}
+
+//BOTON PARA VACIAR CARRITO
+(()=>{    
+    vaciaCarrito.addEventListener("click", vaciar);
+    
+})();
+function vaciar(){
+    localStorage.clear()
+}
+

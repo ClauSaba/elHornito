@@ -1,0 +1,14 @@
+[ 
+{"codigo": 101, "articulo": "Margarita",        "precio": 800 ,  "stock": 10,  "imagen": "https://img.freepik.com/foto-gratis/pizza-margarita-artesanal-napolitana-vista-superior_109656-322.jpg?w=1380"},
+{"codigo": 102, "articulo": "Peperoni",         "precio": 950,   "stock": 10,  "imagen": "https://media-cdn.tripadvisor.com/media/photo-s/1c/4f/ee/99/peperoni-especial.jpg"},
+{"codigo": 103, "articulo": "Calabresa",        "precio": 850 ,  "stock": 10,  "imagen": "https://glebekitchen.com/wp-content/uploads/2018/09/neapolitanpepperoni.jpg"},
+{"codigo": 104, "articulo": "Roquefort",        "precio": 1100 , "stock": 10,  "imagen": "https://www.recetaspizzas.com/base/stock/Recipe/30-image/30-image_web.jpg"},
+{"codigo": 105, "articulo": "Champiniones",     "precio": 1200 , "stock": 10,  "imagen": "https://scontent.fepa9-1.fna.fbcdn.net/v/t1.6435-9/201821439_2557290294417611_9041455878685349021_n.jpg?stp=cp0_dst-jpg_e15_p320x320_q65&_nc_cat=109&ccb=1-6&_nc_sid=9e2e56&efg=eyJpIjoibyJ9&_nc_eui2=AeFipA7cJ7hepjenCrZvp5Huutzf2iAFvdS63N_aIAW91Nfi6Q-9qyeFV4YPUFwZgXHaofpkWetyuJHDHQDVlV9V&_nc_ohc=2YIvJbq8pnkAX8zpsF9&_nc_ht=scontent.fepa9-1.fna&oh=00_AT9YMl29WuGPcND9tFwPPvWRcTRpgxkw7r4gzpG8wTvyWQ&oe=62A137B2"},
+{"codigo": 106, "articulo": "CuatroQuesos",     "precio": 1300 , "stock": 10,  "imagen": "https://img.freepik.com/foto-gratis/pizza-napolitana-cuatro-quesos-superficie-decorada_219193-5558.jpg?w=1380"},
+{"codigo": 107, "articulo": "Especial",         "precio": 1700 , "stock": 10,  "imagen": "https://elgourmet.s3.amazonaws.com/recetas/cover/pizza_RVQZyW9MGB1e04tjEsHcgTlv5PXFpr.png"},
+{"codigo": 201, "articulo": "Harina",           "precio": 400 ,  "stock": 100, "imagen": "https://d3ugyf2ht6aenh.cloudfront.net/stores/001/332/489/products/pizza-napoletana-x-kg1-ce598f9d3d6af27d9b16001268709486-640-0.jpg"},
+{"codigo": 202, "articulo": "Tomate",           "precio": 150 ,  "stock": 50,  "imagen": "https://d3ugyf2ht6aenh.cloudfront.net/stores/001/332/489/products/sanmarzano-25-kg1-1b9e9df1452e17b88d16298422225908-640-0.jpg"},
+{"codigo": 203, "articulo": "Muzzarella",       "precio": 500 ,  "stock": 130, "imagen": "https://static.carrefour.es/hd_510x_/img_pim_food/196268_00_1.jpg"},
+{"codigo": 301, "articulo": "Curso Intensivo",  "precio": 9500,  "stock": 12,  "imagen": "https://scontent.fepa9-2.fna.fbcdn.net/v/t1.6435-9/109132360_107911224342226_4595806117097511062_n.jpg?stp=c0.189.1200.627a_dst-jpg_s843x403&_nc_cat=104&ccb=1-6&_nc_sid=e3f864&_nc_eui2=AeFSQxSFFDOSERlWRGODiaYAlbeYA9jaECmVt5gD2NoQKTxxyY4SvSI_H24_fkTIQnpne4RKgUiN_k55fmNwSVQd&_nc_ohc=fxh3kwyrdd4AX-Yklzv&_nc_ht=scontent.fepa9-2.fna&oh=00_AT8SOsagwNZLKQOazOnZoYtxy6YQUqGDBPQ9Vr-oTc5fBg&oe=62A6D3FD"},
+{"codigo": 302, "articulo": "Servicio Eventos", "precio": 19500, "stock": 12,  "imagen": "https://previews.123rf.com/images/auremar/auremar1110/auremar111002268/11717728-personal-del-sector-de-la-alimentaci%C3%B3n-y-la-restauraci%C3%B3n.jpg"}
+]
