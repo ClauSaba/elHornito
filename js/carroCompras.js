@@ -1,5 +1,5 @@
 //DECLARACION DE VARIABLES
-const carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+let carrito = [];
 const tablaCarrito = document.getElementById("tablaCarrito");
 const cartas = document.getElementById("cartas");
 const vaciaCarrito = document.getElementById("vaciaCarrito");
@@ -53,21 +53,7 @@ producto301,
 producto302
 ]
 
-// Obtiene nombre de usuario e impreme en pantalla
-function obtenerUsuario(){
-    if(sessionStorage.getItem("nombre")){
-        let muestraNombre = document.createElement("span");
-        muestraNombre = sessionStorage.getItem("nombre");
-        tituloPaginaCarrito.append(muestraNombre);
-    }else{
-        const pideNombre = prompt("nombre")
-        nombreUsuario = sessionStorage.setItem("nombre", pideNombre +", ");
-        let muestraNombre = document.createElement("span");
-        muestraNombre = sessionStorage.getItem("nombre");
-        tituloPaginaCarrito.append(muestraNombre);
-    }
-}
-obtenerUsuario();
+
 
 // Crea las cards del carrito
 const card = (item)=>{
@@ -104,27 +90,24 @@ cargaProducto(inventario,cartas);
 function agregaCarro(e){
     e.preventDefault();
     const seleccion = e.target.classList[0];
-    switch(seleccion){// ver de hacer un find() en vez de switch + un push
-        case("101"):// probar poner la variable del codigo para evitar tanta linea
-            localStorage.setItem("carrito", JSON.stringify(carrito))
+    switch(seleccion){
+        case("101"):
             carrito.push({
-                codigo: producto101.codigo,
-                producto: producto101.gusto,
-                precio: parseInt(producto101.precio),
-                cantidadSolicitada: parseInt(producto101.cantidadSolicitada),      
-            })
+            codigo: producto101.codigo,
+            producto: producto101.gusto,
+            precio: parseInt(producto101.precio),
+            cantidadSolicitada: parseInt(producto101.cantidadSolicitada), 
+        }) 
             break;
-        case("102"):
-            localStorage.setItem("carrito", JSON.stringify(carrito))
-            carrito.push({
-                codigo: producto102.codigo,
-                producto: producto102.gusto,
-                precio: parseInt(producto102.precio),
-                cantidadSolicitada: parseInt(producto102.cantidadSolicitada), 
-            })    
+        case("102"):        
+        carrito.push({
+            codigo: producto102.codigo,
+            producto: producto102.gusto,
+            precio: parseInt(producto102.precio),
+            cantidadSolicitada: parseInt(producto102.cantidadSolicitada), 
+        })  
             break;
         case("103"):
-            localStorage.setItem("carrito", JSON.stringify(carrito))
             carrito.push({
                 codigo: producto103.codigo,
                 producto: producto103.gusto,
@@ -133,7 +116,6 @@ function agregaCarro(e){
             })    
             break;
         case("104"):
-            localStorage.setItem("carrito", JSON.stringify(carrito))
             carrito.push({
                 codigo: producto104.codigo,
                 producto: producto104.gusto,
@@ -142,7 +124,6 @@ function agregaCarro(e){
             })    
             break;
         case("105"):
-            localStorage.setItem("carrito", JSON.stringify(carrito))
             carrito.push({
                 codigo: producto105.codigo,
                 producto: producto105.gusto,
@@ -151,7 +132,6 @@ function agregaCarro(e){
             })    
             break;
         case("106"):
-            localStorage.setItem("carrito", JSON.stringify(carrito))
             carrito.push({
                 codigo: producto106.codigo,
                 producto: producto106.gusto,
@@ -160,7 +140,6 @@ function agregaCarro(e){
             })    
             break;
         case("107"):
-            localStorage.setItem("carrito", JSON.stringify(carrito))
             carrito.push({
                 codigo: producto107.codigo,
                 producto: producto107.gusto,
@@ -169,7 +148,6 @@ function agregaCarro(e){
             })    
             break;
         case("201"):
-            localStorage.setItem("carrito", JSON.stringify(carrito))
             carrito.push({
                 codigo: producto201.codigo,
                 producto: producto201.gusto,
@@ -178,7 +156,6 @@ function agregaCarro(e){
             })    
             break;
         case("202"):
-            localStorage.setItem("carrito", JSON.stringify(carrito))
             carrito.push({
                 codigo: producto202.codigo,
                 producto: producto202.gusto,
@@ -187,7 +164,6 @@ function agregaCarro(e){
             })    
             break;
         case("203"):
-            localStorage.setItem("carrito", JSON.stringify(carrito))
             carrito.push({
                 codigo: producto203.codigo,
                 producto: producto203.gusto,
@@ -196,7 +172,6 @@ function agregaCarro(e){
             })    
             break;
         case("301"):
-            localStorage.setItem("carrito", JSON.stringify(carrito))
             carrito.push({
                 codigo: producto301.codigo,
                 producto: producto301.gusto,
@@ -205,7 +180,6 @@ function agregaCarro(e){
             })    
             break;
         case("302"):
-            localStorage.setItem("carrito", JSON.stringify(carrito))
             carrito.push({
                 codigo: producto302.codigo,
                 producto: producto302.gusto,
@@ -214,38 +188,46 @@ function agregaCarro(e){
             })    
             break;
     }
+    localStorage.setItem("carritoStorage", JSON.stringify(carrito));
+    let carritoStorage = JSON.parse(  localStorage.getItem("carritoStorage"))
 
-let fila = (item) =>{ 
-    return(
-        `
-        <tr>
-        <td> ${item.codigo}</td>
-        <td>${item.producto}</td>
-        <td>$${item.precio}</td>
-        <td>${item.cantidadSolicitada}</td>
-        </tr>`
-    );
-};
-
-//FUNCION PARA CREAR FILAS EN CARRITO
-let cargaFila = (datosCarro, nodoCarro)=>{
-    let acumuladorCarro = "";
-        datosCarro.forEach((elemento) => {
-        acumuladorCarro += fila(elemento);
-        })
-        console.log();
-        nodoCarro.innerHTML = acumuladorCarro;
-}
-cargaFila(carrito, tablaCarrito);
-
-}
-
-//BOTON PARA VACIAR CARRITO
-(()=>{    
-    vaciaCarrito.addEventListener("click", vaciar);
+    let fila = (item) =>{ 
+        return(
+            `
+            <tr>
+            <td> ${item.codigo}</td>
+            <td>${item.producto}</td>
+            <td>$${item.precio}</td>
+            <td>${item.cantidadSolicitada}</td>
+            <td>$${item.cantidadSolicitada*item.precio}</td>
+            </tr>`
+        );
+    };
     
-})();
-function vaciar(){
-    localStorage.clear()
+    //FUNCION PARA CREAR FILAS EN CARRITO
+    let cargaFila = (datosCarro, nodoCarro)=>{
+        let acumuladorCarro = "";
+            datosCarro.forEach((elemento) => {
+            acumuladorCarro += fila(elemento);
+            })
+            
+            nodoCarro.innerHTML = acumuladorCarro;
+    }
+    cargaFila(carritoStorage, tablaCarrito);
+    console.log(carrito);
+    console.log(carritoStorage);
+    
+     //BOTON PARA VACIAR CARRITO
+    (()=>{    
+        vaciaCarrito.addEventListener("click", vaciar);
+        
+    })();
+    function vaciar(){
+        carrito = []
+        localStorage.clear()
+        cargaFila(carrito, tablaCarrito);
+    }
 }
+
+    
 

@@ -4,6 +4,36 @@ si es domingo o martes respectivamente
 */
 
 
+// Obtiene nombre de usuario e imprime en pantalla
+
+const { value: text } = Swal.fire({
+    input: 'text',
+    inputLabel: 'Message',
+    inputPlaceholder: 'Por favor, ingresa tu nombre',
+    inputAttributes: {
+        'aria-label': 'Type your message here'
+    },
+    showCancelButton: false
+    })
+    console.log(text);
+    if (text) {
+    Swal.fire(text)
+    }
+
+// function obtenerUsuario(){
+//     if(sessionStorage.getItem("nombre")){
+//         let muestraNombre = document.createElement("span");
+//         muestraNombre = sessionStorage.getItem("nombre");
+//         tituloPaginaCarrito.append(muestraNombre);
+//     }else{
+//         const pideNombre = prompt("nombre")
+//         nombreUsuario = sessionStorage.setItem("nombre", pideNombre );
+//         let muestraNombre = document.createElement("span");
+//         muestraNombre = sessionStorage.getItem("nombre");
+//         tituloPaginaCarrito.append(muestraNombre +", ");
+//     }
+// }
+//obtenerUsuario();
 
 // Captura la fecha seleccionada por el usuario
 function fechaPedido(){ 
