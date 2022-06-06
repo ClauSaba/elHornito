@@ -3,7 +3,7 @@ let carrito = [];
 const tablaCarrito = document.getElementById("tablaCarrito");
 const cartas = document.getElementById("cartas");
 const vaciaCarrito = document.getElementById("vaciaCarrito");
-
+let sumaCarrito = 0
 
 //DECLARACION DE CLASE Y DOS METODOS PARA CONTABILIZAR STOCKS
 class productos{
@@ -214,9 +214,18 @@ function agregaCarro(e){
             nodoCarro.innerHTML = acumuladorCarro;
     }
     cargaFila(carritoStorage, tablaCarrito);
-    console.log(carrito);
-    console.log(carritoStorage);
+
+    sumaCarrito = carritoStorage.reduce( (acc, item) =>{
+        return acc += item.precio;
+    },0);
+
     
+    let totalCarrito = document.getElementById("muestraTotalCarrito")
+    let span = document.createElement("span")
+    totalCarrito.innerHTML = `${sumaCarrito}`
+    muestraTotalCarrito.append(span);
+    
+
      //BOTON PARA VACIAR CARRITO
     (()=>{    
         vaciaCarrito.addEventListener("click", vaciar);
@@ -226,8 +235,11 @@ function agregaCarro(e){
         carrito = []
         localStorage.clear()
         cargaFila(carrito, tablaCarrito);
+        totalCarrito.innerHTML = `Total carrito :$0`
     }
 }
 
-    
+console.log(carrito); /// la tabla no la ve fuera de scope
+
+
 

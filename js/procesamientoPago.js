@@ -71,9 +71,9 @@ function leyendaDescuentoDiaSemana(diaSemana){
 leyendaDescuentoDiaSemana(diaSemana)
 
 // muestra Importe Bruto sin descuentos
-let totalCarrito = document.getElementById("totalCarrito");
-let totalCarro = 21000; // traer valor de carritoCompra.js
-totalCarrito.append(totalCarro)
+let totalCarrito = document.getElementById("totalCarritoPagos");
+let totalCarro = document.getElementById("muestraTotalCarrito").value; // traer valor de carritoCompra.js
+console.log(totalCarro);
 
 //mensaje de descuento por dia de semana
 let descuentoDiaSemana = document.getElementById("descuentoDiaSemana");
