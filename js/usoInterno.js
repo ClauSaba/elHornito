@@ -1,4 +1,4 @@
-let inventario
+let inventario;
 
 
 fetch("../productos.json")
@@ -12,7 +12,7 @@ fetch("../productos.json")
             <td> ${articulos.precio}</td>
             <td> ${articulos.stock}</td>
             `;
-            contenedor.append(li)
+            contenedor.append(li);
         })});
     
     

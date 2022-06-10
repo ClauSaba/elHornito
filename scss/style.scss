@@ -1,8 +1,3 @@
-/*font-family: 'Asap', sans-serif;
-font-family: 'Bitter', serif;
-font-family: 'Josefin Sans', sans-serif;
-*/
-
 *{
     padding: 0;
     margin: 0;
@@ -12,8 +7,13 @@ font-family: 'Josefin Sans', sans-serif;
     scroll-padding-top: 20vh;
     color: white;
 } 
-p{
-    font-family: 'Josefin Sans', sans-serif
+
+.fa-user-lock{
+    width: 30px;
+    height: 20px;
+    font-size: 18px;
+    text-align: center;
+    color: black;
 }
 
 .boton {
@@ -35,7 +35,7 @@ p{
         background: #fff;
         color: green;
     }
-
+ 
 
 
 .cabecera{
@@ -111,8 +111,10 @@ main{
 
 p{
     font-size: 1.2vw;
+    padding-bottom: 2vh;
     color: white;
     text-align: justify;
+    font-family: 'Josefin Sans', sans-serif
 }
 h2{
     color: rgb(220, 214, 203) ;
@@ -127,7 +129,9 @@ h2{
 
 }
 
-
+.intro{
+    padding-top: 4vh;
+}
 .bloque{
     width: 96%;
     margin: 3vh auto;
@@ -153,14 +157,26 @@ h2{
 .botonReserva{
     width: 8vw;
     height: 4vh;
-    margin-top: 3vh;
+    margin-top: 2vh;
     color: rgb(77, 42, 2);
     padding: 5px 10px;
+    
     font-weight: bold;
     border-radius: 5px;
     border: 2px solid rgb(77, 42, 2);
     background: white;
     
+}
+
+.mensaje{
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 2vw;
+    color: brown;
+}
+
+.negro{
+    color: black;
+    font-size: 4vh;
 }
 
 .shopping{
@@ -299,33 +315,24 @@ footer{
     font-size: 5vh;
     font-weight: bolder;
     color: white;
-    
-    .cartas{
-        color: brown;
-    }
 }
-.grid{
+.grilla{
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, 19vw);
     grid-template-rows: repeat(3, 1fr);
-    column-gap:  10px; ;
     row-gap: 10px;
-    justify-items: center;
+    column-gap: 10px;
+    justify-content: space-between;
     align-content: space-between;
-    align-items: center;
     .card{
-        
-        border: 5px solid white;
-        background-color: wheat;       
+        border: 5px solid white; 
         img{
             width: 100%;
-            height: 200px;
+            height:150px;
             object-fit: cover;
         }
     }
 }
-
-// cartas
 
 .btn a{
     text-decoration: none;
@@ -333,7 +340,7 @@ footer{
     color: black
 }
 
-//pagina procesamientoPago
+
 .tituloPromo{
     color: wheat;
     font-size: 3vh;
@@ -348,23 +355,22 @@ footer{
     font-weight: bolder;
 }
 
-.tituloPromo h1{
+#tituloPromo h1{
+    width: 80%;
+    margin: auto;
+    text-align: center;
     font-weight: bold;
-    font-size: 4vw;
-    font-family: 'Josefin Sans', sans-serif;;
+    font-size: 3vw;
+    font-family: 'Josefin Sans', sans-serif;
+    margin-bottom: 4vh;
 }
-.tituloPromo h3{
+#tituloPromo h3{
+    width: 80%;
+    margin: auto;
     font-size: 2vw;
-    color: rgb(209, 207, 201);
-    padding-bottom: 2vh;
-}
-.tituloPromo{
-    margin-bottom: 3vh;
-}
-.promociones p{
-    font-size: 3vh;
-    
-
+    font-family: 'Josefin Sans', sans-serif;;
+    margin-top: 2vh;
+    color: #e6dbc7;
 }
 #fechaUsuario{
     margin-bottom: 5vh;
@@ -378,4 +384,26 @@ footer{
     font-size: 3vh;
     font-weight: bolder;
     margin-left: 3vw;
+}
+
+.table{
+    text-align: center;
+    .botonEliminar{
+        width: 100%;
+        border: transparent;
+    }
+}
+
+#leyendaTotal{
+    margin: 3vh 0 7vh 0;
+    padding-left: 5vw;
+}
+
+#tituloPromo{
+    margin: 7vh 0;
+}
+
+#listado{
+    width: 80%;
+    margin: auto;
 }

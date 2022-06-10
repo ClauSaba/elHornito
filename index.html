@@ -15,8 +15,8 @@
     <link rel="stylesheet" href="./css/style.css"> 
 </head>
 <body>
-    <header class="cabecera">
-        <div class="logo"><img src="./img/logoHorno.png" alt="logo el hornito"> </div>
+    <header  class="cabecera">
+        <div class="logo"><a href="#inicio"><img src="./img/logoHorno.png" alt="logo el hornito"> </a></div>
         <nav class="categorias">
             <ul class="navegador">
                 <li><a href="#catering">Catering</a></li>
@@ -24,20 +24,20 @@
                 <li><a href="#curso">Curso</a></li>
                 <li><a href="#galeria">Galeria</a></li>
                 <li><a href="#ingredientes"> Ingredientes</a></li>
-            </ul>
-            
+            </ul>            
         </nav>
         <button class="botonesIndex"><a href="./pages/carroCompra.html"><img src="./img/icons8-carrito-de-compras-48(@2x).png"></img></a></button>
-        
+        <button class="btnLK "><a href="#" onclick="verStocks()"><i class="fa-solid fa-user-lock"></i></a></button>        
     </header>
     <main>
         <section class="cuerpoPrincipal">
+            <a name="inicio">
             <div class="intro bloque">
                 <img src="./img/pizzaSaliendoHorno.jpg" alt="Pizza saliendo del horno leña">
                 <div class="descripcion">
                     <h2>Pasión por la Pizza..</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo aliquid animi dolor quasi maxime quod porro praesentium? Nulla non minima illum magni nemo aperiam nisi, harum impedit. Reiciendis, dolore blanditiis!</p>
-                    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Est perspiciatis magni totam, sapiente ex rerum adipisci cumque architecto, voluptas, velit modi nihil. Quo provident harum beatae consequuntur sequi, assumenda illo! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem delectus earum, soluta error iure repellendus ratione eos expedita molestiae nam cumque at, animi quia quas magni ipsam! Reprehenderit, dolorem culpa!</p>
+                    <p>La pizza napolitana, de masa tierna y delgada pero bordes altos, es la versión propia de la cocina napolitana de la pizza redonda. El término pizza napoletana, por su importancia histórica o regional, se emplea en algunas zonas como sinónimo de pizza tonda (‘pizza redonda’). Bajo la denominación pizza napoletana verace artigianale (‘pizza napolitana auténtica artesanal’) está reconocida como producto agroalimentario tradicional italiano.</p>
+                    <p>La peculiaridad de la pizza napolitana se debe principalmente a su base, que debe prepararse con masa de pan (completamente desprovista de grasa) tierna y elástica, estirada a mano en forma de disco sin tocar los bordes, que durante la cocción formarán la típica ‘bordes’ (cornicioni) de 1 o 2 cm</p>
                 </div>
             </div>
 
@@ -45,10 +45,11 @@
             <div class="catering bloque">
                 <div class="descripcion">                
                     <h2>Pizzas recien salidas del horno..</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo aliquid animi dolor quasi maxime quod porro praesentium? Nulla non minima illum magni nemo aperiam nisi, harum impedit. Reiciendis, dolore blanditiis!</p>
-                    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Est perspiciatis magni totam, sapiente ex rerum adipisci cumque architecto, voluptas, velit modi nihil. Quo provident harum beatae consequuntur sequi, assumenda illo! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem delectus earum, soluta error iure repellendus ratione eos expedita molestiae nam cumque at, animi quia quas magni ipsam! Reprehenderit, dolorem culpa!</p>
+                    <p>En el lugar que vos elijas, podemos acompañarte con las mejores opciones para hacer tu fiesta inolvidable. Tenemos una gran variedad de opciones que seguro se adaptan a tus necesidades y presupuesto.</p>
+                    <p>Ofrecemos un servicio tradicional de catering con amplia oferta de productos frescos y con la mejor calidad, hechos en en momento con horno de leña portatil</p>
+                    <p>Llevamos equipos y utensilios al lugar del evento, instalamos los hornos para que nuestros maestros pizzeros se encarguen de todo, vos sólo tenés que preocuparte por disfrutar el servicio y tu fiesta.</p>
                 </div>
-                <img src="./img/equipoPizzeros.jpg" alt="Pizza saliendo del horno leña">
+                <img src="./img/equipoPizzeros.jpg" alt="pizzeros trabajando">
             </div>
 
             <a name="eventos"></a>
@@ -56,9 +57,10 @@
             <img src="./img/equipoEventos.jpg" alt="Pizza saliendo del horno leña">
             <div class="eventosInner descripcion">
                 <h2>Nos ocupamos de todo, vos solo disfrutá de la fiesta!</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo aliquid animi dolor quasi maxime quod porro praesentium? Nulla non minima illum magni nemo aperiam nisi, harum impedit. Reiciendis, dolore blanditiis!</p>
-                <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Est perspiciatis magni totam, sapiente ex rerum adipisci cumque architecto, voluptas, velit modi nihil. Quo provident harum beatae consequuntur sequi, assumenda illo! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem delectus earum, soluta error iure repellendus ratione eos expedita molestiae nam cumque at, animi quia quas magni ipsam! Reprehenderit, dolorem culpa!</p>
-                <button class="botonReserva"><a href="./pages/carroCompra.html"></a>Reservas</button>
+                <p>Originalidad, le damos a tu evento un toque extraordinario, con lo novedoso y la tecnología que nos hace únicos.</p>
+                <p>La mejor Calidad, garantizamos la mejor calidad. Trabajamos con personal altamente capacitado para brindarte lo mejor.</p>    
+                <p> El condimento ideal para tus eventos. Entendemos la importancia de tu evento y por eso te ofrecemos algo exclusivo para que todo salga memorable.</p>
+                <button class="botonReserva" onclick="reservaInfo()"><a href="./pages/carroCompra.html"></a>Reservas</button>
             </div>
             </div>
 
@@ -66,10 +68,10 @@
             <div class="curso bloque">
             <div class="descripcion">
                 <h2>Taller intensivo Pizza Napolitana</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo aliquid animi dolor quasi maxime quod porro praesentium? Nulla non minima illum magni nemo aperiam nisi, harum impedit. Reiciendis, dolore blanditiis!</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est perspiciatis magni totam, sapiente ex rerum adipisci cumque architecto, voluptas, velit modi nihil. Quo provident harum beatae consequuntur sequi, assumenda illo! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem delectus earum, soluta error iure repellendus ratione eos expedita molestiae nam cumque at, animi quia quas magni ipsam! Reprehenderit, dolorem culpa!</p>
+                <p>Contamos con Workshops y cursos que están orientados tanto a toda persona aficionada que quiera iniciarse en el mundo de la pizza napoletana, como a profesionales que quieran profundizar sus técnicas. Guiado por profesionales que no sólo imparten las técnicas, variantes e instrucciones, sino también una experiencia en la que se aborda el origen y aspectos culturales del plato insignia de Nápoles.</p>
+                <p>El alumno aprenderá la técnica de elaboración y amasado, los tiempos y formas de elevación, las proporciones de acuerdo a la producción, las materias primas más aconsejables, el expertise y los secretos para lograr una auténtica pizza napoletana.</p>
             </div>
-            <img src="./img/escuelaPizza.jpg" alt="Pizza saliendo del horno leña">
+            <img src="./img/escuelaPizza.jpg" alt="escuela de pizzas">
             </div>
 
             
@@ -101,7 +103,7 @@
                             </div>
                             <div class="cardsInnerBack">
                                 <h3 class="cardTittle">Harina</h3>
-                                <p class="descripcionCard">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nisi dolore eius laboriosam dicta commodi, consequatur a voluptatibus hic repellat, dolor provident maiores alias eum quod ipsam ea ex eveniet veniam.</p>
+                                <p class="descripcionCard">Harina tipo "00", con un alto contenido en proteínas, capaz de mantener la estructura del gluten durante mucho tiempo. Estructurado y resistente, para masas napolitanas.</p>
                                 <button class="botonesIndex"><a href="./pages/carroCompra.html"><img src="./img/icons8-carrito-de-compras-48(@2x).png"></img></a></button>
                             </div>                
                         </div>
@@ -112,7 +114,7 @@
                             </div>
                             <div class="cardsInnerBack">
                                 <h3 class="cardTittle">Tomate</h3>
-                                <p class="descripcionCard">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nisi dolore eius laboriosam dicta commodi, consequatur a voluptatibus hic repellat, dolor provident maiores alias eum quod ipsam ea ex eveniet veniam.</p>
+                                <p class="descripcionCard">El tomate San Marzano es una variedad cultivada del tomate que se usa en una de las salsas de tomate más apreciadas en la cocina italiana</p>
                                 <button class="botonesIndex"><a href="./pages/carroCompra.html"><img src="./img/icons8-carrito-de-compras-48(@2x).png"></img></a></button>
                             </div>                
                         </div>
@@ -123,14 +125,12 @@
                             </div>
                             <div class="cardsInnerBack">
                                 <h3 class="cardTittle" >Mozzarella</h3>
-                                <p class="descripcionCard">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nisi dolore eius laboriosam dicta commodi, consequatur a voluptatibus hic repellat, dolor provident maiores alias eum quod ipsam ea ex eveniet veniam.</p>
+                                <p class="descripcionCard">el porcentaje de proteínas es mayor en la mozzarella de búfala, su color es más intenso y su textura más aterciopelada y suave</p>
                                 <button class="botonesIndex"><a href="./pages/carroCompra.html"><img src="./img/icons8-carrito-de-compras-48(@2x).png"></img></a></button>
                             </div>                
                         </div>  
                     </div>
-                </div>   
-    
-                
+                </div>                
         </section>
     </main>
     <footer>
@@ -143,11 +143,12 @@
             <li class="btnFB"><a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-square"></i></a></li>
             <li class="btnTW"><a href="https://twitter.com" target="_blank"><i class="fab fa-twitter-square"></i></a></li>
             <li class="btnIG"><a href="https://instagram.com" target="_blank"><i class="fab fa-instagram-square"></i></a></li>
-            <li class="btnLK"><a href="#" onclick="verStocks()"><i class="fa-solid fa-user-lock"></i></a></li>
         </ul>
         
-        <p> 11 - 1234 - 5678</p>
+        <p class="negro "><i class="fa-solid fa-phone negro"></i> 1234-5678</p>
     </footer>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="./js/index.js"></script>
 </body>
